@@ -1,2 +1,29 @@
 # WKWebViewJSBridge
-A bridge for sending messages between iOS and Javascript in WKWebView.
+
+[![CI Status](https://img.shields.io/travis/xyh30902@163.com/WKWebViewJSBridge.svg?style=flat)](https://travis-ci.org/xyh30902@163.com/WKWebViewJSBridge)
+[![Version](https://img.shields.io/cocoapods/v/WKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/WKWebViewJSBridge)
+[![License](https://img.shields.io/cocoapods/l/WKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/WKWebViewJSBridge)
+[![Platform](https://img.shields.io/cocoapods/p/WKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/WKWebViewJSBridge)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+## Installation
+
+WKWebViewJSBridge is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'WKWebViewJSBridge'
+```
+
+## Author
+
+xyh30902@163.com, yh.xie@tuya.com
+
+## License
+
+WKWebViewJSBridge is available under the MIT license. See the LICENSE file for more info.

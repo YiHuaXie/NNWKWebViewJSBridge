@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<style type='text/css'>
+		html {
+			font-family: Helvetica;
+			color: #000000;
+		}
+
+		h1 {
+			color: #6785d8;
+			font-size: 24px;
+			margin-top: 24px;
+		}
+
+		button {
+			margin: 0 3px 10px;
+			font-size: 12px;
+		}
+
+		.native_border {
+			border: 1px solid #FFA67C;
+			padding: 4px 2px;
+			font-family: courier;
+			font-size: 12px;
+		}
+
+		.js_border {
+			border: 1px solid #6785d8;
+			padding: 4px 2px;
+			font-family: courier;
+			font-size: 12px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>WKWebViewJSBridge Demo</h1>
+	<script>
+		window.onerror = error => {
+			log('window.onerror: ' + err)
+		}
+
+		function log(message, data, isNative) {
+			let log = document.getElementById('log');
+			let div = document.createElement('div');
+			div.className = isNative == true ? 'native_border' : 'js_border';
+			div.innerHTML = message + ':<br/>' + JSON.stringify(data);
+			if (log.children.length) {
+				log.insertBefore(div, log.children[0]);
+			} else {
+				log.appendChild(div);
+			}
+		}
+
+		function setupWKWebViewJSBridge(callback) {
+			if (window.WKWebViewJSBridge) {
+				return callback(WKWebViewJSBridge);
+			}
+
+			if (window.WKWebViewJSBridgeCallbacks) {
+				return window.WKWebViewJSBridgeCallbacks.push(callback);
+			}
+			window.WKWebViewJSBridgeCallbacks = [callback];
+
+			window.webkit.messageHandlers.iOS_InjectJavascript.postMessage(null);
+		}
+
+		setupWKWebViewJSBridge(bridge => {
+			bridge.registerHandler('JSBridgeBegin', (data, responseCallback) => {
+				log('JSBridge Begin, Data', data, true);
+			});
+
+			bridge.registerHandler('nameFromJS', (data, responseCallback) => {
+				log('[nameFromJS] called by Native, Data', data, true);
+				log('JS responding Data!', 'Nero JS', true);
+				responseCallback('Nero JS');
+			});
+
+			document.body.appendChild(document.createElement('br'))
+
+			let callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+			callbackButton.innerHTML = 'call native';
+			callbackButton.onclick = e => {
+				e.preventDefault();
+				bridge.callHandler('nameFromNative', 'Hi, Native!', response => {
+					log('JS got response', response, false);
+				});
+			}
+		});
+
+	</script>
+	<div id='buttons'></div>
+	<div id='log'></div>
+</body>
+
+</html>
