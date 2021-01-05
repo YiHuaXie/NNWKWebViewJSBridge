@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/YiHuaXie/WKWebViewJSBridge'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Nero Xie' => 'xyh30902@163.com' }
-  s.source           = { :git => 'https://github.com/YiHuaXie/WKWebViewJSBridge', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/YiHuaXie/WKWebViewJSBridge.git', :tag => s.version.to_s }
   s.source_files     = 'WKWebViewJSBridge/Classes/**/*'
   s.platform         = :ios, '9.0'
   s.requires_arc     = true
