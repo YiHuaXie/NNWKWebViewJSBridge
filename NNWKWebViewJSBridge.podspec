@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NNWKWebViewJSBridge'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'A bridge for sending messages between iOS and Javascript in WKWebView.'
   s.homepage         = 'https://github.com/YiHuaXie/NNWKWebViewJSBridge'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
