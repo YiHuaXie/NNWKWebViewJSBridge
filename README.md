@@ -1,15 +1,15 @@
 # WKWebViewJSBridge
 
-[![CI Status](https://img.shields.io/travis/xyh30902@163.com/WKWebViewJSBridge.svg?style=flat)](https://travis-ci.org/xyh30902@163.com/WKWebViewJSBridge)
-[![Version](https://img.shields.io/cocoapods/v/WKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/WKWebViewJSBridge)
-[![License](https://img.shields.io/cocoapods/l/WKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/WKWebViewJSBridge)
-[![Platform](https://img.shields.io/cocoapods/p/WKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/WKWebViewJSBridge)
+[![Language](https://img.shields.io/badge/Language-Swift-FFA08F.svg)](https://github.com/apple/swift)
+[![License](https://img.shields.io/cocoapods/l/NNWKWebViewJSBridge.svg?style=flat)](https://raw.githubusercontent.com/YiHuaXie/NNWKWebViewJSBridge/master/LICENSE)
+[![Version](https://img.shields.io/cocoapods/v/NNWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/NNWKWebViewJSBridge)
+[![Platform](https://img.shields.io/cocoapods/p/NNWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/NNWKWebViewJSBridge)
 
 ## 简介
 
 在看了[WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJavascriptBridge)的项目，我希望可以用swift去实现一个javascript bridge，所以写了这个项目。该项目是基于WebViewJavascriptBridge实现，仅支持WKWebView。
 
-![](Resource/WKWebViewJSBridge_demo.png)
+![](Resource/WKWebViewJSBridge_demo.jpg)
 
 ## 使用
 
@@ -91,7 +91,7 @@ setupWKWebViewJSBridge(bridge => {
 ## 安装
 
 ```ruby
-pod 'WKWebViewJSBridge'
+pod 'NNWKWebViewJSBridge'
 ```
 
 ## 作者
@@ -100,4 +100,4 @@ pod 'WKWebViewJSBridge'
 
 ## 许可证
 
-WKWebViewJSBridge 基于 MIT 许可证，查看 LICENSE 文件了解更多信息。
+NNWKWebViewJSBridge 基于 MIT 许可证，查看 LICENSE 文件了解更多信息。
