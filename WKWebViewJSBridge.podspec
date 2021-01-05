@@ -8,35 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WKWebViewJSBridge'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of WKWebViewJSBridge.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/xyh30902@163.com/WKWebViewJSBridge'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.version          = '0.0.1'
+  s.summary          = 'A bridge for sending messages between iOS and Javascript in WKWebView.'
+  s.homepage         = 'https://github.com/YiHuaXie/WKWebViewJSBridge'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'xyh30902@163.com' => 'yh.xie@tuya.com' }
-  s.source           = { :git => 'https://github.com/xyh30902@163.com/WKWebViewJSBridge.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'WKWebViewJSBridge/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'WKWebViewJSBridge' => ['WKWebViewJSBridge/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.author           = { 'Nero Xie' => 'xyh30902@163.com' }
+  s.source           = { :git => 'https://github.com/YiHuaXie/WKWebViewJSBridge', :tag => s.version.to_s }
+  s.source_files     = 'WKWebViewJSBridge/Classes/**/*'
+  s.platform         = :ios, '9.0'
+  s.requires_arc     = true
 end

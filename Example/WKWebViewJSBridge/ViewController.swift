@@ -12,7 +12,7 @@ import WKWebViewJSBridge
 
 class ViewController: UIViewController {
     
-    let webView = WKWebView(frame: CGRect(), configuration: WKWebViewConfiguration())
+    let webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
     
     var bridge: WKWebViewJSBridge!
     
@@ -121,3 +121,4 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
+

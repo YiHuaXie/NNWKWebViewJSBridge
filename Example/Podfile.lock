@@ -1,5 +1,5 @@
 PODS:
-  - WKWebViewJSBridge (0.1.0)
+  - WKWebViewJSBridge (0.0.1)
 
 DEPENDENCIES:
   - WKWebViewJSBridge (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WKWebViewJSBridge: 83164cf172ba3d491f95b6216326b001f777707a
+  WKWebViewJSBridge: 7616d40bae82195228204a428cb5280239df7f53
 
 PODFILE CHECKSUM: f9132fda8381869548a95ea652c555496be7a201
 
