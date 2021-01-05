@@ -1,5 +1,5 @@
 import XCTest
-import WKWebViewJSBridge
+import NNWKWebViewJSBridge
 
 class Tests: XCTestCase {
     

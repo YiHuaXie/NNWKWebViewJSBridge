@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-import WKWebViewJSBridge
+import NNWKWebViewJSBridge
 
 class ViewController: UIViewController {
     

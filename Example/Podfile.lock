@@ -1,16 +1,16 @@
 PODS:
-  - WKWebViewJSBridge (0.0.1)
+  - NNWKWebViewJSBridge (0.0.1)
 
 DEPENDENCIES:
-  - WKWebViewJSBridge (from `../`)
+  - NNWKWebViewJSBridge (from `../`)
 
 EXTERNAL SOURCES:
-  WKWebViewJSBridge:
+  NNWKWebViewJSBridge:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WKWebViewJSBridge: 7616d40bae82195228204a428cb5280239df7f53
+  NNWKWebViewJSBridge: 2ee6a4f65eb79b840d4be1e732842ac4b3d593cc
 
-PODFILE CHECKSUM: f9132fda8381869548a95ea652c555496be7a201
+PODFILE CHECKSUM: caa04cf7ec8c92242c3963d82c7304c94b52e5fa
 
 COCOAPODS: 1.10.0

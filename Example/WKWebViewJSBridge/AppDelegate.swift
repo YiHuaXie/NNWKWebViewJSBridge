@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import WKWebViewJSBridge
+import NNWKWebViewJSBridge
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
