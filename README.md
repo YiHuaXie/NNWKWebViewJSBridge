@@ -3,7 +3,6 @@
 [![Language](https://img.shields.io/badge/Language-Swift-FFA08F.svg)](https://github.com/apple/swift)
 [![License](https://img.shields.io/cocoapods/l/NNWKWebViewJSBridge.svg?style=flat)](https://raw.githubusercontent.com/YiHuaXie/NNWKWebViewJSBridge/master/LICENSE)
 [![Version](https://img.shields.io/cocoapods/v/NNWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/NNWKWebViewJSBridge)
-[![Platform](https://img.shields.io/cocoapods/p/NNWKWebViewJSBridge.svg?style=flat)](https://cocoapods.org/pods/NNWKWebViewJSBridge)
 
 ## 简介
 
