@@ -25,6 +25,7 @@ public class WKWebViewJSBridge: NSObject {
     
     private var userContentController = WKUserContentController()
     
+    /// Initializes a `WKWebViewJSBridge`
     public required init(webView: WKWebView) {
         super.init()
         
@@ -40,26 +41,30 @@ public class WKWebViewJSBridge: NSObject {
         removeScriptMessageHandlers()
     }
     
-    // MARK: - Public
+    // MARK: - Public Method
+    
+    /// Registers a handler in native
     public func register(handlerName: String, hanler: @escaping MessageHandler) {
         base.register(handlerName: handlerName, hanler: hanler)
     }
     
+    /// Removes a handler in native
     public func remove(handlerName: String) {
         base.remove(handlerName: handlerName)
     }
     
+    /// Calls a JavaScript handler
     public func call(handlerName: String, data: Any? = nil, callback: ResponseCallback? = nil) {
         base.send(data: data, responseCallback: callback, for: handlerName)
     }
     
-    private func reset() {
+    public func reset() {
         base.reset()
     }
     
-    // MARK: - Private
+    // MARK: - Private Method
+    
     private func addScriptMessageHandlers() {
-        // ScriptMessageHandlerWrapper class used to warp WKWebViewJSBridge. It will solve the memory leak.
         let wrapper = ScriptMessageHandlerWrapper(target: self)
         webView?.configuration.userContentController.add(wrapper, name: iOS_InjectJavascript)
         webView?.configuration.userContentController.add(wrapper, name: iOS_FlushMessageQueue)
@@ -107,6 +112,7 @@ extension WKWebViewJSBridge: WKScriptMessageHandler {
     }
 }
 
+/// `ScriptMessageHandlerWrapper` used to warp `WKWebViewJSBridge`. It will solve the memory leak.
 fileprivate class ScriptMessageHandlerWrapper: NSObject {
     
     weak var target: WKScriptMessageHandler?

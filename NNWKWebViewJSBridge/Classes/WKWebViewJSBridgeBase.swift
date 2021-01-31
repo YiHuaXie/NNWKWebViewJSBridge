@@ -44,7 +44,7 @@ class WKWebViewJSBridgeBase {
         messageHandlers[handlerName] = hanler
     }
     
-    public func remove(handlerName: String) {
+    func remove(handlerName: String) {
         _ = messageHandlers.removeValue(forKey: handlerName)
     }
     
@@ -112,7 +112,8 @@ class WKWebViewJSBridgeBase {
         delegate?.evaluateJavaScript(WKWebViewJSBridge_JavaScriptString)
     }
     
-    // MARK: -
+    // MARK: - Private Method
+    
     private func queue(message: Message) {
         guard startupMessageQueue.isEmpty else {
             startupMessageQueue.append(message)
@@ -140,13 +141,17 @@ class WKWebViewJSBridgeBase {
         if Thread.current.isMainThread {
             delegate?.evaluateJavaScript(js)
         } else {
-            DispatchQueue.main.async {
+            DispatchQueue.main.sync {
                 self.delegate?.evaluateJavaScript(js)
             }
         }
+//        DispatchQueue.main.async {
+//            self.delegate?.evaluateJavaScript(js)
+//        }
     }
     
     // MARK: - JSON
+    
     private func serialize(message: Message, pretty: Bool) -> String? {
         var string: String?
         do {
@@ -174,6 +179,7 @@ class WKWebViewJSBridgeBase {
     }
     
     // MARK: - Log
+    
     private func log<T>(_ message: T, file: String = #file, function: String = #function, line: Int = #line) {
         #if DEBUG
         guard type(of: self).logging else { return }
