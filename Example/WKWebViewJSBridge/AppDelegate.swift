@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  WKWebViewJSBridge
 //
-//  Created by xyh30902@163.com on 12/31/2020.
-//  Copyright (c) 2020 xyh30902@163.com. All rights reserved.
+//  Created by NeroXie on 12/31/2020.
+//  Copyright (c) 2020 NeroXie. All rights reserved.
 //
 
 import UIKit
